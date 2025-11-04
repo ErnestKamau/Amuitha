@@ -31,7 +31,7 @@ function App() {
                 <a className="nav-link" href="#about">About</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#testimonials">Testimonials</a>
+                <a className="nav-link" href="#why-us">Why Us</a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#contact">Contact</a>
@@ -199,7 +199,7 @@ function App() {
       </section>
 
       {/* Testimonials Section */}
-      <section id="testimonials" className="testimonials-section py-5">
+      <section id="why-us" className="testimonials-section py-5">
         <div className="container">
           <div className="row">
             <div className="col-lg-12 text-center mb-5">
@@ -400,7 +400,7 @@ function App() {
               <ul className="footer-links">
                 <li><a href="#services">Services</a></li>
                 <li><a href="#about">About Us</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#why-us">Why Us</a></li>
                 <li><a href="#contact">Contact</a></li>
               </ul>
             </div>
