@@ -73,14 +73,29 @@
   overflow: hidden;
 }
 
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/doctorpic.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(6px) brightness(0.6);
+  transform: scale(1.1);
+  z-index: 0;
+}
+
 .hero-background-overlay {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></svg>');
-  opacity: 0.3;
+  background: linear-gradient(135deg, rgba(10, 77, 104, 0.85) 0%, rgba(74, 20, 140, 0.85) 100%);
   z-index: 1;
 }
 
@@ -160,8 +175,11 @@
   left: 50%;
   transform: translateX(-50%);
   color: white;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
+  opacity: 0.9;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
   animation: bounce 2s infinite;
+  z-index: 3;
 }
 
 @keyframes bounce {
@@ -192,13 +210,19 @@
   font-weight: 600;
 }
 
-.service-card-large,
-.service-card-small {
+.service-card-large {
   position: relative;
   border-radius: 20px;
   overflow: hidden;
   height: 100%;
   min-height: 500px;
+}
+
+.service-card-small {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  min-height: 400px;
 }
 
 .service-card-image {
@@ -209,22 +233,25 @@
   height: 100%;
   background-size: cover;
   background-position: center;
-  filter: blur(2px);
+  filter: blur(1px);
 }
 
 .service-card-image-1 {
-  background: linear-gradient(135deg, #8B4513 0%, #654321 100%);
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><rect fill="%23a0522d" width="400" height="300"/></svg>');
+  background-image: url('/Nursing-Care.jpg.webp');
+  background-size: cover;
+  background-position: center;
 }
 
 .service-card-image-2 {
-  background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><rect fill="%231e3a5f" width="400" height="300"/></svg>');
+  background-image: url('/tablets.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 .service-card-image-3 {
-  background: linear-gradient(135deg, #f8c8dc 0%, #ffb6c1 100%);
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><rect fill="%23f8c8dc" width="400" height="300"/></svg>');
+  background-image: url('/makeup-cosmetics.webp');
+  background-size: cover;
+  background-position: center;
 }
 
 .service-card-overlay {
@@ -235,6 +262,7 @@
   background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.5) 50%, transparent 100%);
   padding: 2rem;
   color: white;
+  border-radius: 0 0 20px 20px;
 }
 
 .service-card-overlay-small {
@@ -245,6 +273,7 @@
   background: linear-gradient(to top, rgba(30, 58, 95, 0.95) 0%, rgba(30, 58, 95, 0.7) 50%, transparent 100%);
   padding: 1.5rem;
   color: white;
+  border-radius: 0 0 20px 20px;
 }
 
 .service-card-overlay-beauty {
@@ -255,6 +284,7 @@
   background: linear-gradient(to top, rgba(248, 200, 220, 0.95) 0%, rgba(248, 200, 220, 0.7) 50%, transparent 100%);
   padding: 1.5rem;
   color: #333;
+  border-radius: 0 0 20px 20px;
 }
 
 .service-card-icon {
@@ -351,7 +381,7 @@
 
 /* Testimonials Section */
 .testimonials-section {
-  background: #f8f9fa;
+  background: #f0f8ff;
   padding: 80px 0;
 }
 
@@ -365,61 +395,57 @@
   font-weight: 600;
 }
 
-.testimonial-card {
-  background: white;
+.service-info-card {
+  background: #f8f9fa;
   border-radius: 15px;
   padding: 2rem;
   height: 100%;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.testimonial-card:hover {
+.service-info-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  background: white;
 }
 
-.stars {
-  color: #ffc107;
-  font-size: 1.2rem;
-}
-
-.testimonial-text {
-  font-size: 1rem;
-  line-height: 1.7;
-  color: #555;
-  margin-bottom: 1.5rem;
-  font-style: italic;
-}
-
-.testimonial-author {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.author-avatar {
-  width: 50px;
-  height: 50px;
-  background: var(--blue);
-  border-radius: 50%;
+.service-info-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0 auto;
+  font-size: 2rem;
   color: white;
+}
+
+.service-info-icon-teal {
+  background: var(--teal);
+}
+
+.service-info-icon-blue {
+  background: var(--blue);
+}
+
+.service-info-icon-purple {
+  background: var(--purple);
+}
+
+.service-info-title {
+  font-size: 1.3rem;
   font-weight: 700;
-  font-size: 1.2rem;
+  color: #2d3748;
+  margin: 1rem 0;
 }
 
-.author-name {
-  font-weight: 600;
-  color: #333;
-  margin-bottom: 0.25rem;
-}
-
-.author-role {
-  font-size: 0.85rem;
-  color: #888;
+.service-info-description {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #555;
+  margin: 0;
 }
 
 /* About Section */
@@ -484,8 +510,11 @@
 .about-image-placeholder {
   width: 100%;
   height: 500px;
-  background: linear-gradient(135deg, #ff7849 0%, #ffa500 100%);
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500"><rect fill="%23ff7849" width="400" height="500"/></svg>');
+  background-image: url('/health.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 20px;
 }
 
 .satisfaction-card {

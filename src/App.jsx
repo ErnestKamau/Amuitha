@@ -3,8 +3,9 @@ import './App.css'
 function App() {
   return (
     <div className="App">
-      {/* Navigation */}
-      <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+      {/* Navigation Header */}
+      <header>
+        <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
         <div className="container">
           <a className="navbar-brand fw-bold" href="#home">
             <i className="bi bi-heart-pulse-fill brand-icon me-2"></i>
@@ -42,7 +43,10 @@ function App() {
           </div>
         </div>
       </nav>
+      </header>
 
+      {/* Main Content */}
+      <main>
       {/* Hero Section */}
       <section id="home" className="hero-section">
         <div className="hero-background-overlay"></div>
@@ -195,79 +199,48 @@ function App() {
       </section>
 
       {/* Testimonials Section */}
-      <section id="testimonials" className="testimonials-section py-5 bg-light">
+      <section id="testimonials" className="testimonials-section py-5">
         <div className="container">
           <div className="row">
             <div className="col-lg-12 text-center mb-5">
-              <div className="section-badge-purple mb-3">Testimonials</div>
-              <h2 className="display-4 fw-bold mb-3">What Our Clients Say</h2>
-              <p className="lead text-muted">
-                Real stories from people whose lives we've touched
+              <h2 className="display-4 fw-bold mb-4 text-dark">Why Families in Meru Trust Us</h2>
+              <p className="lead text-muted mb-5" style={{ maxWidth: '800px', margin: '0 auto' }}>
+                At Meru Home-Based Nursing Care, we deliver compassionate, professional, and culturally sensitive care for adults, seniors, and children across Meru County. Every service we offer is designed to bring comfort, dignity, and peace of mind to your family.
               </p>
             </div>
           </div>
           <div className="row g-4">
             <div className="col-md-4">
-              <div className="testimonial-card">
-                <div className="stars mb-3">
-                  <i className="bi bi-star-fill"></i>
-                  <i className="bi bi-star-fill"></i>
-                  <i className="bi bi-star-fill"></i>
-                  <i className="bi bi-star-fill"></i>
-                  <i className="bi bi-star-fill"></i>
+              <div className="service-info-card">
+                <div className="service-info-icon service-info-icon-teal mb-3">
+                  <i className="bi bi-heart-pulse-fill"></i>
                 </div>
-                <p className="testimonial-text">
-                  "The nursing care my mother received was exceptional. Professional, compassionate, and always available when we needed them."
+                <h4 className="service-info-title">Home Health Care</h4>
+                <p className="service-info-description">
+                  Rehabilitative and therapeutic support after illness, injury, or hospital stay, all from the comfort of home.
                 </p>
-                <div className="testimonial-author">
-                  <div className="author-avatar">S</div>
-                  <div className="author-info">
-                    <div className="author-name">Sarah Kimathi</div>
-                    <div className="author-role">Home Care Client</div>
-                  </div>
-                </div>
               </div>
             </div>
             <div className="col-md-4">
-              <div className="testimonial-card">
-                <div className="stars mb-3">
-                  <i className="bi bi-star-fill"></i>
-                  <i className="bi bi-star-fill"></i>
-                  <i className="bi bi-star-fill"></i>
-                  <i className="bi bi-star-fill"></i>
-                  <i className="bi bi-star-fill"></i>
+              <div className="service-info-card">
+                <div className="service-info-icon service-info-icon-blue mb-3">
+                  <i className="bi bi-person-hearts"></i>
                 </div>
-                <p className="testimonial-text">
-                  "The quality of supplements from Amuitha has significantly improved my energy levels and overall health. Highly recommend!"
+                <h4 className="service-info-title">Personal Care & Companionship</h4>
+                <p className="service-info-description">
+                  Gentle assistance with grooming, meals, mobility, and daily living, offered with kindness and respect.
                 </p>
-                <div className="testimonial-author">
-                  <div className="author-avatar">J</div>
-                  <div className="author-info">
-                    <div className="author-name">John Mwenda</div>
-                    <div className="author-role">Supplement Customer</div>
-                  </div>
-                </div>
               </div>
             </div>
             <div className="col-md-4">
-              <div className="testimonial-card">
-                <div className="stars mb-3">
-                  <i className="bi bi-star-fill"></i>
-                  <i className="bi bi-star-fill"></i>
-                  <i className="bi bi-star-fill"></i>
-                  <i className="bi bi-star-fill"></i>
-                  <i className="bi bi-star-fill"></i>
+              <div className="service-info-card">
+                <div className="service-info-icon service-info-icon-purple mb-3">
+                  <i className="bi bi-house-heart-fill"></i>
                 </div>
-                <p className="testimonial-text">
-                  "Found the perfect wig and skincare products here. The staff is knowledgeable and helped me choose what's best for me."
+                <h4 className="service-info-title">Private Duty Nursing</h4>
+                <p className="service-info-description">
+                  Dedicated nursing care for adults and seniors living with chronic illnesses, disabilities, or recovery needs.
                 </p>
-                <div className="testimonial-author">
-                  <div className="author-avatar">G</div>
-                  <div className="author-info">
-                    <div className="author-name">Grace Wanjiru</div>
-                    <div className="author-role">Beauty Products Client</div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -319,18 +292,13 @@ function App() {
               </div>
 
               <a href="#contact" className="btn btn-gradient btn-lg mt-3">
-                Partner With Us
+                Book Assessment
                 <i className="bi bi-arrow-right ms-2"></i>
               </a>
             </div>
             <div className="col-lg-6">
               <div className="about-image-wrapper">
                 <div className="about-image-placeholder"></div>
-                <div className="satisfaction-card">
-                  <i className="bi bi-star-fill me-2"></i>
-                  <div className="satisfaction-rating">4.9/5</div>
-                  <div className="satisfaction-label">Client Satisfaction</div>
-                </div>
               </div>
             </div>
           </div>
@@ -409,6 +377,7 @@ function App() {
           </div>
         </div>
       </section>
+      </main>
 
       {/* Footer */}
       <footer className="footer-section">
